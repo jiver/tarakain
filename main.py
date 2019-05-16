@@ -53,6 +53,6 @@ app = web.Application()
 app.router.add_post('/api/messages', messages)
 
 try:
-    web.run_app(app, port=PORT)
+    web.run_app(app, port=os.environ['PORT'])
 except Exception as e:
     raise e
