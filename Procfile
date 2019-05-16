@@ -1,1 +1,1 @@
-web: python main.py -p 8080
+worker: python main.py
