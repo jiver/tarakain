@@ -72,7 +72,7 @@ class MainDialog(ComponentDialog):
         choice = choice_dict.get(response, None)
         # If the user's choice was not found, respond saying the bot didn't understand the user's response.
         if not choice:
-            not_found = create_activity_reply(step_context.context.activity, 'Sorry, I didn\'t understand that. :(')
+            not_found = create_activity_reply(step_context.context.activity, response)
             await step_context.context.send_activity(not_found)
         else:
             for func in choice:
