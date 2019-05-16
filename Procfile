@@ -1,1 +1,1 @@
-web: python main.py runserver 0.0.0.0:3978
+web: python main.py
