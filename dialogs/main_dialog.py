@@ -51,7 +51,7 @@ class MainDialog(ComponentDialog):
      self method is only called when a valid prompt response is parsed from the user's response to the ChoicePrompt.
     """
     async def show_card_step(self, step_context: WaterfallStepContext):
-        response = step_context.result.lower().strip()
+        response = step_context.result.lower().replace("tara kain",'').strip()
         choice_dict = {
             '1': [self.create_adaptive_card], 'adaptive card': [self.create_adaptive_card],
             '2': [self.create_animation_card], 'animation card': [self.create_animation_card],
